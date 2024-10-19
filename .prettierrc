@@ -1,0 +1,12 @@
+{
+  "semi": true,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "printWidth": 80,
+  "arrowParens": "always",
+  "quoteProps": "consistent",
+  "trailingComma": "es5",
+  "singleAttributePerLine": true,
+  "vueIndentScriptAndStyle": true,
+  "plugins": ["prettier-plugin-organize-imports"]
+}
