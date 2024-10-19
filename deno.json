@@ -2,9 +2,11 @@
   "nodeModulesDir": "auto",
   "workspace": [
     "./packages/math",
+    "./packages/event-bus"
   ],
   "exports": {
     "./math": "./packages/math/src/mod.ts",
+    "./event-bus": "./packages/event-bus/src/mod.ts"
   },
   "license": "MIT",
   "imports": {
