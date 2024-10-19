@@ -10,7 +10,8 @@
     "jsr:@std/path@^1.0.6": "1.0.6",
     "jsr:@std/testing@1": "1.0.3",
     "npm:prettier-plugin-organize-imports@^4.1.0": "4.1.0_prettier@3.3.3_typescript@5.6.3",
-    "npm:prettier@*": "3.3.3"
+    "npm:prettier@*": "3.3.3",
+    "npm:prettier@3.3.3": "3.3.3"
   },
   "jsr": {
     "@std/assert@1.0.6": {
@@ -71,7 +72,8 @@
     "dependencies": [
       "jsr:@std/expect@1",
       "jsr:@std/testing@1",
-      "npm:prettier-plugin-organize-imports@^4.1.0"
+      "npm:prettier-plugin-organize-imports@^4.1.0",
+      "npm:prettier@3.3.3"
     ],
     "members": {
       "packages/event-bus": {

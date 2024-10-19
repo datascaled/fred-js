@@ -1,17 +1,19 @@
 {
   "nodeModulesDir": "auto",
-  "workspace": [
-    "./packages/math",
-    "./packages/event-bus"
-  ],
+  "workspace": ["./packages/math", "./packages/event-bus"],
   "exports": {
     "./math": "./packages/math/src/mod.ts",
     "./event-bus": "./packages/event-bus/src/mod.ts"
+  },
+  "tasks": {
+    "format": "deno -A npm:prettier --write .",
+    "format:check": "deno -A npm:prettier --check ."
   },
   "license": "MIT",
   "imports": {
     "@std/expect": "jsr:@std/expect@1",
     "@std/testing": "jsr:@std/testing@1",
+    "prettier": "npm:prettier@3.3.3",
     "prettier-plugin-organize-imports": "npm:prettier-plugin-organize-imports@^4.1.0"
   }
 }
