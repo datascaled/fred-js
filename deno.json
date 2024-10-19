@@ -1,0 +1,13 @@
+{
+  "nodeModulesDir": "auto",
+  "workspace": [
+  ],
+  "exports": {
+  },
+  "license": "MIT",
+  "imports": {
+    "@std/expect": "jsr:@std/expect@1",
+    "@std/testing": "jsr:@std/testing@1",
+    "prettier-plugin-organize-imports": "npm:prettier-plugin-organize-imports@^4.1.0"
+  }
+}
