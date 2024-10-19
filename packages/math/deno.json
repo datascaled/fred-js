@@ -1,0 +1,9 @@
+{
+  "name": "@crux/math",
+  "version": "0.1.0",
+  "exports": "./src/mod.ts",
+  "tasks": {
+    "dev": "deno test --watch mod.ts"
+  },
+  "license": "MIT"
+}
