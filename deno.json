@@ -2,7 +2,8 @@
   "nodeModulesDir": "auto",
   "workspace": [
     "./packages/math",
-    "./packages/event-bus"
+    "./packages/event-bus",
+    "./packages/selection-model"
   ],
   "license": "MIT",
   "imports": {
