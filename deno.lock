@@ -8,10 +8,7 @@
     "jsr:@std/fs@^1.0.4": "1.0.4",
     "jsr:@std/internal@^1.0.4": "1.0.4",
     "jsr:@std/path@^1.0.6": "1.0.6",
-    "jsr:@std/testing@1": "1.0.3",
-    "npm:prettier-plugin-organize-imports@^4.1.0": "4.1.0_prettier@3.3.3_typescript@5.6.3",
-    "npm:prettier@*": "3.3.3",
-    "npm:prettier@3.3.3": "3.3.3"
+    "jsr:@std/testing@1": "1.0.3"
   },
   "jsr": {
     "@std/assert@1.0.6": {
@@ -53,27 +50,10 @@
       ]
     }
   },
-  "npm": {
-    "prettier-plugin-organize-imports@4.1.0_prettier@3.3.3_typescript@5.6.3": {
-      "integrity": "sha512-5aWRdCgv645xaa58X8lOxzZoiHAldAPChljr/MT0crXVOWTZ+Svl4hIWlz+niYSlO6ikE5UXkN1JrRvIP2ut0A==",
-      "dependencies": [
-        "prettier",
-        "typescript"
-      ]
-    },
-    "prettier@3.3.3": {
-      "integrity": "sha512-i2tDNA0O5IrMO757lfrdQZCc2jPNDVntV0m/+4whiDfWaTKfMNgR7Qz0NAeGz/nRqF4m5/6CLzbP4/liHt12Ew=="
-    },
-    "typescript@5.6.3": {
-      "integrity": "sha512-hjcS1mhfuyi4WW8IWtjP7brDrG2cuDZukyrYrSauoXGNgx0S7zceP07adYkJycEr56BOUTNPzbInooiN3fn1qw=="
-    }
-  },
   "workspace": {
     "dependencies": [
       "jsr:@std/expect@1",
-      "jsr:@std/testing@1",
-      "npm:prettier-plugin-organize-imports@^4.1.0",
-      "npm:prettier@3.3.3"
+      "jsr:@std/testing@1"
     ],
     "members": {
       "packages/event-bus": {

@@ -33,7 +33,7 @@ export interface EventBusable<Events extends Record<string, unknown>> {
   on<K extends keyof Events>(
     event: K,
     listener: EventBusListener<Events[K]>,
-    options?: EventBusListenerOptions
+    options?: EventBusListenerOptions,
   ): EventBusListenerId;
 
   /**
@@ -44,7 +44,7 @@ export interface EventBusable<Events extends Record<string, unknown>> {
    */
   off<K extends keyof Events>(
     event: K,
-    listener: EventBusListener<Events[K]> | EventBusListenerId
+    listener: EventBusListener<Events[K]> | EventBusListenerId,
   ): void;
 }
 
@@ -52,8 +52,7 @@ export interface EventBusable<Events extends Record<string, unknown>> {
  * Event bus for emitting and listening to events.
  */
 export class EventBus<Events extends Record<string, unknown>>
-  implements EventBusable<Events>
-{
+  implements EventBusable<Events> {
   private static busIdCounter = 0;
   private static listenerIdCounter: EventBusListenerId = -1;
 
@@ -80,7 +79,7 @@ export class EventBus<Events extends Record<string, unknown>>
   on<K extends keyof Events>(
     event: K,
     listener: EventBusListener<Events[K]>,
-    options?: EventBusListenerOptions
+    options?: EventBusListenerOptions,
   ): EventBusListenerId {
     const listeners = this.getListenersWithOptions(event) ?? new Set();
     const id = ++EventBus.listenerIdCounter;
@@ -132,7 +131,7 @@ export class EventBus<Events extends Record<string, unknown>>
    */
   off<K extends keyof Events>(
     event: K,
-    listener: EventBusListener<Events[K]> | EventBusListenerId
+    listener: EventBusListener<Events[K]> | EventBusListenerId,
   ) {
     if (typeof listener === 'number') {
       this.removeListenerById(event, listener);
@@ -143,7 +142,7 @@ export class EventBus<Events extends Record<string, unknown>>
 
   private removeListenerByCallback<K extends keyof Events>(
     event: K,
-    listener: EventBusListener<Events[K]>
+    listener: EventBusListener<Events[K]>,
   ) {
     const listenersWithOptions = this.getListenersWithOptions(event);
     if (listenersWithOptions) {
@@ -157,7 +156,7 @@ export class EventBus<Events extends Record<string, unknown>>
 
   private removeListenerById<K extends keyof Events>(
     event: K,
-    id: EventBusListenerId
+    id: EventBusListenerId,
   ) {
     const listenersWithOptions = this.getListenersWithOptions(event);
     if (listenersWithOptions) {

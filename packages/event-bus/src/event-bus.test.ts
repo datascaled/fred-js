@@ -151,7 +151,7 @@ describe('EventBus', () => {
       () => {
         calledCount++;
       },
-      { once: true }
+      { once: true },
     );
 
     eventBus.emit('test');

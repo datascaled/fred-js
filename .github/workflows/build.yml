@@ -12,7 +12,7 @@ jobs:
           deno-version: v2.x # Run with latest stable Deno.
 
       # Check if the code is formatted
-      - run: deno task format:check
+      - run: deno fmt --check
 
       # Scan the code for syntax errors and style issues. If
       # you want to use a custom linter configuration you can add a configuration file with --config <myconfig>

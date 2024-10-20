@@ -38,6 +38,5 @@
  *  // Can also call `clear` to remove all listeners from all events
  *  eventBus.clear();
  * ```
- *
  */
 export * from './event-bus.ts';

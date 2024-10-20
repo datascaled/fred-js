@@ -17,7 +17,7 @@ export function remap(
   srcA: number,
   srcB: number,
   destA: number,
-  destB: number
+  destB: number,
 ): number {
   return lerp(invLerp(value, srcA, srcB), destA, destB);
 }
