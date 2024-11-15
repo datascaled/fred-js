@@ -1,3 +1,3 @@
 <template>
-  <h1>Hello, crux!</h1>
+  <h1>Hello, Lou!</h1>
 </template>

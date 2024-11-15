@@ -1,5 +1,5 @@
-import { prefersReducedMotion } from '@crux/a11y';
-import { clamp01, invLerp } from '@crux/math';
+import { prefersReducedMotion } from '@lou/a11y';
+import { clamp01, invLerp } from '@lou/math';
 import type { EasingFunction } from './easings.ts';
 
 export type TransitionRenderFunction = (t: number) => void;

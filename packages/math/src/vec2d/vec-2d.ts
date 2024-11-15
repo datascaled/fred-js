@@ -1,4 +1,4 @@
-import { roundPrecision } from '@crux/math';
+import { roundPrecision } from '@lou/math';
 
 /**
  * A cartesian 2D vector.

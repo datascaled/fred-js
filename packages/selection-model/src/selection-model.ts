@@ -4,7 +4,7 @@ import {
   type EventBusListener,
   type EventBusListenerId,
   type EventBusListenerOptions,
-} from '@crux/event-bus';
+} from '@lou/event-bus';
 
 /**
  * A function that will be called to uniquely identify items.

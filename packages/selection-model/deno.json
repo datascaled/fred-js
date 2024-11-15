@@ -1,5 +1,5 @@
 {
-  "name": "@crux/selection-model",
+  "name": "@lou/selection-model",
   "version": "0.1.0",
   "exports": "./src/mod.ts",
   "license": "MIT"
