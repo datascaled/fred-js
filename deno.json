@@ -1,17 +1,22 @@
 {
-  "nodeModulesDir": "auto",
-  "workspace": [
-    "./packages/math",
-    "./packages/event-bus",
-    "./packages/selection-model"
-  ],
+  "nodeModulesDir": "none",
   "license": "MIT",
-  "imports": {
-    "@std/expect": "jsr:@std/expect@1",
-    "@std/testing": "jsr:@std/testing@1"
-  },
   "fmt": {
     "singleQuote": true,
     "semiColons": true
-  }
+  },
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "dom.asynciterable", "deno.ns"]
+  },
+  "imports": {
+    "@std/expect": "jsr:@std/expect@^1.0.8",
+    "@std/testing": "jsr:@std/testing@1.0.5"
+  },
+  "workspace": [
+    "./packages/a11y",
+    "./packages/animation",
+    "./packages/event-bus",
+    "./packages/math",
+    "./packages/selection-model"
+  ]
 }
