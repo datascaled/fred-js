@@ -98,7 +98,7 @@ describe('Vec2D', () => {
     const a: v.Vec2D = { x: 1, y: 2 };
     const b: v.Vec2D = { x: 1, y: 2 };
 
-    expect(v.equal(a, b)).toBe(true);
+    expect(v.equals(a, b)).toBe(true);
   });
 
   test('up()', () => {

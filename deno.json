@@ -1,13 +1,26 @@
 {
   "nodeModulesDir": "none",
   "license": "MIT",
+  "tasks": {
+    "test": "deno test --coverage=coverage && deno coverage coverage"
+  },
   "fmt": {
     "singleQuote": true,
     "semiColons": true,
-    "exclude": ["**/node_modules/**", "**/dist/**", "./apps/demo"]
+    "exclude": [
+      "**/node_modules/**",
+      "**/dist/**",
+      "tmp",
+      "apps/demo"
+    ]
   },
   "lint": {
-    "exclude": ["**/node_modules/**", "**/dist/**", "./apps/demo"]
+    "exclude": [
+      "**/node_modules/**",
+      "**/dist/**",
+      "tmp",
+      "apps/demo"
+    ]
   },
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "dom.asynciterable", "deno.ns"]

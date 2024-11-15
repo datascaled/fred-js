@@ -5,16 +5,20 @@
 
       <ul class="landing__links">
         <li class="landing__link">
+          <SimpleLink href="/about">About</SimpleLink>
+        </li>
+
+        <li class="landing__link">
+          <SimpleLink href="/demos">Demos</SimpleLink>
+        </li>
+
+        <li class="landing__link">
           <SimpleLink
             href="https://github.com/datascaled/lou-js"
             target="_blank"
           >
             GitHub
           </SimpleLink>
-        </li>
-
-        <li class="landing__link">
-          <SimpleLink href="/demos">Demos</SimpleLink>
         </li>
       </ul>
     </main>

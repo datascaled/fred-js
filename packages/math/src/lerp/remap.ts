@@ -1,4 +1,4 @@
-import { invLerp } from './inv-lerp.ts';
+import { clampedInvLerp, invLerp } from './inv-lerp.ts';
 import { lerp } from './lerp.ts';
 
 /**
@@ -20,4 +20,25 @@ export function remap(
   destB: number,
 ): number {
   return lerp(invLerp(value, srcA, srcB), destA, destB);
+}
+
+/**
+ * Remaps a value from one range to another, clamping the result between destA and destB.
+ *
+ * @param value The value to remap.
+ * @param srcA The start of the source range.
+ * @param srcB The end of the source range.
+ * @param destA The start of the destination range.
+ * @param destB The end of the destination range.
+ *
+ * @returns The clamped value remapped to the destination range.
+ */
+export function clampedRemap(
+  value: number,
+  srcA: number,
+  srcB: number,
+  destA: number,
+  destB: number,
+): number {
+  return lerp(clampedInvLerp(value, srcA, srcB), destA, destB);
 }

@@ -1,4 +1,5 @@
-import { roundPrecision } from '@lou/math';
+import { clamp, roundPrecision } from '@lou/math';
+import type { Rect } from '@lou/math/rect';
 
 /**
  * A cartesian 2D vector.
@@ -6,6 +7,57 @@ import { roundPrecision } from '@lou/math';
 export interface Vec2D {
   x: number;
   y: number;
+}
+
+/**
+ * Creates a new vector.
+ *
+ * @returns A new vector.
+ */
+export function create(init?: Partial<Vec2D>): Vec2D {
+  return {
+    x: 0,
+    y: 0,
+    ...init,
+  };
+}
+
+/**
+ * Clones a vector.
+ *
+ * @returns A new vector.
+ */
+export function clone(v: Vec2D): Vec2D {
+  return {
+    x: v.x,
+    y: v.y,
+  };
+}
+
+/**
+ * Checks if two vectors are equal.
+ *
+ * @param a The first vector.
+ * @param b The second vector.
+ *
+ * @returns True if the vectors are equal, false otherwise.
+ */
+export function equals(a: Vec2D, b: Vec2D): boolean {
+  return a.x === b.x && a.y === b.y;
+}
+
+/**
+ * Clamps a vector to a rectangle.
+ *
+ * @param v The vector.
+ * @param rect The rectangle to clamp to.
+ * @returns A new vector.
+ */
+export function clampToRect(v: Vec2D, rect: Rect): Vec2D {
+  return {
+    x: clamp(v.x, rect.x, rect.x + rect.width),
+    y: clamp(v.y, rect.y, rect.y + rect.height),
+  };
 }
 
 /**
@@ -17,7 +69,10 @@ export interface Vec2D {
  * @returns The sum of the two vectors.
  */
 export function add(a: Vec2D, b: Vec2D): Vec2D {
-  return { x: a.x + b.x, y: a.y + b.y };
+  return {
+    x: a.x + b.x,
+    y: a.y + b.y,
+  };
 }
 
 /**
@@ -29,7 +84,10 @@ export function add(a: Vec2D, b: Vec2D): Vec2D {
  * @returns The difference of the two vectors.
  */
 export function subtract(a: Vec2D, b: Vec2D): Vec2D {
-  return { x: a.x - b.x, y: a.y - b.y };
+  return {
+    x: a.x - b.x,
+    y: a.y - b.y,
+  };
 }
 
 /**
@@ -41,7 +99,10 @@ export function subtract(a: Vec2D, b: Vec2D): Vec2D {
  * @returns The scaled vector.
  */
 export function scale(v: Vec2D, s: number): Vec2D {
-  return { x: v.x * s, y: v.y * s };
+  return {
+    x: v.x * s,
+    y: v.y * s,
+  };
 }
 
 /**
@@ -64,7 +125,10 @@ export function length(v: Vec2D): number {
  */
 export function normalize(v: Vec2D): Vec2D {
   const l = length(v);
-  return { x: v.x / l, y: v.y / l };
+  return {
+    x: v.x / l,
+    y: v.y / l,
+  };
 }
 
 /**
@@ -144,18 +208,6 @@ export function lerp(t: number, a: Vec2D, b: Vec2D): Vec2D {
  */
 export function distance(a: Vec2D, b: Vec2D): number {
   return length(subtract(a, b));
-}
-
-/**
- * Checks if two vectors are equal.
- *
- * @param a The first vector.
- * @param b The second vector.
- *
- * @returns True if the vectors are equal, false otherwise.
- */
-export function equal(a: Vec2D, b: Vec2D): boolean {
-  return a.x === b.x && a.y === b.y;
 }
 
 /**

@@ -37,14 +37,14 @@ describe('Rect', () => {
     const rect: r.Rect = { x: 0, y: 0, width: 10, height: 10 };
     const point = { x: 5, y: 5 };
 
-    expect(r.pointInside(rect, point)).toBe(true);
+    expect(r.isPointInside(point, rect)).toBe(true);
   });
 
   test('contains(r, o)', () => {
     const rect: r.Rect = { x: 0, y: 0, width: 10, height: 10 };
     const other: r.Rect = { x: 0, y: 0, width: 5, height: 5 };
 
-    expect(r.contains(rect, other)).toBe(true);
+    expect(r.isInsideOther(rect, other)).toBe(true);
   });
 
   test('intersects(r, o)', () => {
