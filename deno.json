@@ -4,7 +4,10 @@
   "fmt": {
     "singleQuote": true,
     "semiColons": true,
-    "exclude": ["**/node_modules/**", "**/dist/**", "/apps/demo"]
+    "exclude": ["**/node_modules/**", "**/dist/**", "./apps/demo"]
+  },
+  "lint": {
+    "exclude": ["**/node_modules/**", "**/dist/**", "./apps/demo"]
   },
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "dom.asynciterable", "deno.ns"]

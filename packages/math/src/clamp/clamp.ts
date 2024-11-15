@@ -6,7 +6,7 @@
  * @param max The maximum value.
  * @returns The clamped value.
  */
-export function clamp(value: number, min: number, max: number) {
+export function clamp(value: number, min: number, max: number): number {
   return Math.min(Math.max(value, min), max);
 }
 
@@ -16,6 +16,6 @@ export function clamp(value: number, min: number, max: number) {
  * @param value The value to clamp.
  * @returns The clamped value.
  */
-export function clamp01(value: number) {
+export function clamp01(value: number): number {
   return clamp(value, 0, 1);
 }
