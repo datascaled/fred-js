@@ -60,51 +60,51 @@ export interface TransitionHandle {
  * @returns The transition handle.
  */
 export function transition(options: TransitionOptions): TransitionHandle {
-    if (options.respectPrefersReducedMotion && prefersReducedMotion()) {
-      options.render(1);
-      options.onFinished?.();
-      options.onCompleted?.();
-      return {
-        completed: Promise.resolve(),
-        cancel: () => {
-          options.onCanceled?.();
-        },
-      };
-    }
-
-    let canceled = false;
-
-    const finished = new Promise<void>((resolve) => {
-      const start = performance.now();
-
-      requestAnimationFrame(function frame(time) {
-        if (canceled) {
-          options.onCanceled?.();
-          options.onCompleted?.();
-          resolve();
-          return;
-        }
-
-        const t = clamp01(invLerp(time, start, start + options.duration));
-        const easedT = options.easing(t);
-        const roundedT = Math.round(easedT * 10_000) / 10_000;
-
-        options.render(roundedT);
-
-        if (t < 1) {
-          requestAnimationFrame(frame);
-        } else {
-          options.onFinished?.();
-          options.onCompleted?.();
-          resolve();
-        }
-      });
-    });
-
+  if (options.respectPrefersReducedMotion && prefersReducedMotion()) {
+    options.render(1);
+    options.onFinished?.();
+    options.onCompleted?.();
     return {
-      completed: finished,
+      completed: Promise.resolve(),
       cancel: () => {
-        canceled = true;
+        options.onCanceled?.();
       },
     };
+  }
+
+  let canceled = false;
+
+  const finished = new Promise<void>((resolve) => {
+    const start = performance.now();
+
+    requestAnimationFrame(function frame(time) {
+      if (canceled) {
+        options.onCanceled?.();
+        options.onCompleted?.();
+        resolve();
+        return;
+      }
+
+      const t = clamp01(invLerp(time, start, start + options.duration));
+      const easedT = options.easing(t);
+      const roundedT = Math.round(easedT * 10_000) / 10_000;
+
+      options.render(roundedT);
+
+      if (t < 1) {
+        requestAnimationFrame(frame);
+      } else {
+        options.onFinished?.();
+        options.onCompleted?.();
+        resolve();
+      }
+    });
+  });
+
+  return {
+    completed: finished,
+    cancel: () => {
+      canceled = true;
+    },
+  };
 }

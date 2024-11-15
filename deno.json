@@ -3,7 +3,8 @@
   "license": "MIT",
   "fmt": {
     "singleQuote": true,
-    "semiColons": true
+    "semiColons": true,
+    "exclude": ["**/node_modules/**", "**/dist/**", "/apps/demo"]
   },
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "dom.asynciterable", "deno.ns"]
