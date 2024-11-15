@@ -1,0 +1,12 @@
+{
+  "arrowParens": "always",
+  "printWidth": 80,
+  "quoteProps": "consistent",
+  "semi": true,
+  "singleAttributePerLine": true,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": true
+}

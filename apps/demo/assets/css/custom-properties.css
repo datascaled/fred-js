@@ -1,0 +1,20 @@
+:root {
+  /*
+   * Definition of --t-rem
+   *
+   * clamp(0rem, calc((100vw - [min_viewport_width]rem) / ([max_viewport_width] - [min_viewport_width])), 1rem);
+   *
+   * [min_viewport_width] = 22.5rem = 360px
+   * [max_viewport_width] = 99rem   = 1584px
+   *
+   * This results in a value from 0rem to 1rem.
+   */
+  --t-rem: clamp(0rem, calc((100vw - 22.5rem) / (99 - 22.5)), 1rem);
+
+  /*
+    Colors
+    ------
+  */
+  --rgb-link: 0, 0, 255;
+  --color-link: rgb(var(--rgb-link));
+}
