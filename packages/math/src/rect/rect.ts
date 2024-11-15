@@ -1,4 +1,4 @@
-import type { Vec2D } from './vec-2d.ts';
+import type { Vec2D } from '@crux/math/vec2d';
 
 export interface Rect {
   x: number;

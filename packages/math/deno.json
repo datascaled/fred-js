@@ -1,9 +1,10 @@
 {
   "name": "@crux/math",
   "version": "0.1.0",
-  "exports": "./src/mod.ts",
-  "tasks": {
-    "dev": "deno test --watch mod.ts"
+  "exports": {
+    ".": "./src/mod.ts",
+    "./rect": "./src/rect/index.ts",
+    "./vec2d": "./src/vec2d/index.ts"
   },
   "license": "MIT"
 }

@@ -1,4 +1,4 @@
-import { roundPrecision } from './round.ts';
+import { roundPrecision } from '@crux/math';
 
 /**
  * A cartesian 2D vector.
