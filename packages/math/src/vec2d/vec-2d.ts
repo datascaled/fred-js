@@ -129,7 +129,7 @@ export function normalize(v: Vec2D): Vec2D {
   if (l === 0) {
     return {
       x: 0,
-      y: 0 
+      y: 0,
     };
   }
 
