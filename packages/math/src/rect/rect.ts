@@ -1,4 +1,4 @@
-import type { Vec2D } from '@lou/math/vec2d';
+import type { Vec2D } from '@fred/math/vec2d';
 
 export interface Rect {
   x: number;

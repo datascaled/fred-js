@@ -1,7 +1,7 @@
 <template>
   <div class="landing">
     <main class="landing__main">
-      <h1 class="landing__title">Lou</h1>
+      <h1 class="landing__title">Fred</h1>
 
       <ul class="landing__links">
         <li class="landing__link">
@@ -14,7 +14,7 @@
 
         <li class="landing__link">
           <SimpleLink
-            href="https://github.com/datascaled/lou-js"
+            href="https://github.com/datascaled/fred-js"
             target="_blank"
           >
             GitHub

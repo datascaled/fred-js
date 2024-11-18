@@ -1,4 +1,4 @@
-import { clamp01 } from '@lou/math';
+import { clamp01 } from '@fred/math';
 
 /**
  * Linearly interpolates between two values.

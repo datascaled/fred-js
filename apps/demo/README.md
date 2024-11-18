@@ -1,4 +1,4 @@
-# Lou Demo App
+# Fred Demo App
 
 Look at the
 [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to

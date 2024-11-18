@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxtjs/tailwindcss'],
   alias: {
-    '@lou/math': '../../packages/math/src/mod.ts',
+    '@fred/math': '../../packages/math/src/mod.ts',
   },
   vite: {
     server: {

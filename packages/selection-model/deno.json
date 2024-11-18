@@ -1,5 +1,5 @@
 {
-  "name": "@lou/selection-model",
+  "name": "@fred/selection-model",
   "version": "0.1.0",
   "exports": "./src/mod.ts",
   "license": "MIT"

@@ -1,5 +1,5 @@
-import { clamp, roundPrecision } from '@lou/math';
-import type { Rect } from '@lou/math/rect';
+import { clamp, roundPrecision } from '@fred/math';
+import type { Rect } from '@fred/math/rect';
 
 /**
  * A cartesian 2D vector.

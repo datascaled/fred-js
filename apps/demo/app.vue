@@ -1,10 +1,10 @@
 <script setup lang="ts">
   useHead({
-    title: 'Lou - Library of utilities',
+    title: 'Fred - Functional Resources for Easy Development',
     meta: [
       {
         name: 'description',
-        content: 'Lou is a library of useful utilities written in TypeScript.',
+        content: 'Fred is a library of useful utilities written in TypeScript.',
       },
     ],
   });

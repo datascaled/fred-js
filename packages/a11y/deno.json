@@ -1,5 +1,5 @@
 {
-  "name": "@lou/a11y",
+  "name": "@fred/a11y",
   "version": "0.1.0",
   "exports": "./src/mod.ts",
   "license": "MIT"
