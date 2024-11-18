@@ -125,6 +125,14 @@ export function length(v: Vec2D): number {
  */
 export function normalize(v: Vec2D): Vec2D {
   const l = length(v);
+
+  if (l === 0) {
+    return {
+      x: 0,
+      y: 0 
+    };
+  }
+
   return {
     x: v.x / l,
     y: v.y / l,

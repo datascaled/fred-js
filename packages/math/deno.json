@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "exports": {
     ".": "./src/mod.ts",
-    "./rect": "./src/rect/index.ts",
-    "./vec2d": "./src/vec2d/index.ts"
+    "./rect": "./src/rect/mod.ts",
+    "./vec2d": "./src/vec2d/mod.ts"
   },
   "license": "MIT"
 }
