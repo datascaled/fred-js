@@ -6,11 +6,35 @@ on:
       - main
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x # Run with latest stable Deno.
+
+      # Check if the code is formatted
+      - run: deno fmt --check
+
+      # Scan the code for syntax errors and style issues. If
+      # you want to use a custom linter configuration you can add a configuration file with --config <myconfig>
+      - run: deno lint
+
+      # Run all test files in the repository and collect code coverage. The example
+      # runs with all permissions, but it is recommended to run with the minimal permissions your program needs (for example --allow-read).
+      - run: deno test --allow-all --coverage=coverage
+
+      # This generates a report from the collected coverage in `deno test --coverage`. It is
+      # stored as a .lcov file which integrates well with services such as Codecov, Coveralls and Travis CI.
+      - run: deno coverage --lcov coverage/ > coverage.lcov
   publish:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
       id-token: write # The OIDC ID token is used for authentication with JSR.
     steps:
       - uses: actions/checkout@v4
-      - run: npx jsr publish
+      - name: Publish to jsr.io
+        run: npx jsr publish
