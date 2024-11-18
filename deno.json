@@ -31,7 +31,6 @@
   },
   "workspace": [
     "./packages/a11y",
-    "./packages/animation",
     "./packages/event-bus",
     "./packages/math",
     "./packages/selection-model"
