@@ -47,6 +47,15 @@ describe('Vec2D', () => {
     });
   });
 
+  test('normalize(0)', () => {
+    const vec: v.Vec2D = { x: 0, y: 0 };
+
+    expect(v.normalize(vec)).toStrictEqual({
+      x: 0,
+      y: 0,
+    });
+  });
+
   test('dot(a, b)', () => {
     const a: v.Vec2D = { x: 1, y: 2 };
     const b: v.Vec2D = { x: 3, y: 4 };
