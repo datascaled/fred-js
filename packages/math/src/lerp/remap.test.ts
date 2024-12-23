@@ -30,6 +30,11 @@ describe('remap(value, srcA, srcB, destA, destB)', () => {
   it('should return below 0', () => {
     expect(remap(-1, 0, 1, 0, 100)).toBe(-100);
   });
+
+  it('should work inversely', () => {
+    expect(remap(20, 100, 0, 0, 1)).toBe(0.8);
+    expect(remap(0, 0, 1, 1, 0)).toBe(1);
+  });
 });
 
 describe('clampedRemap(value, srcA, srcB, destA, destB)', () => {
@@ -59,5 +64,10 @@ describe('clampedRemap(value, srcA, srcB, destA, destB)', () => {
 
   it('should not return below 0', () => {
     expect(clampedRemap(-1, 0, 1, 0, 100)).toBe(0);
+  });
+
+  it('should work inversely', () => {
+    expect(clampedRemap(20, 100, 0, 0, 1)).toBe(0.8);
+    expect(clampedRemap(-0.1, 0, 1, 1, 0)).toBe(1);
   });
 });

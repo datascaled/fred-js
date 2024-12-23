@@ -30,6 +30,10 @@ describe('lerp(t, a, b)', () => {
   it('should continue below 0', () => {
     expect(lerp(-1, 0, 1)).toBe(-1);
   });
+
+  it('should work inversely', () => {
+    expect(lerp(0.2, 1, 0)).toBe(0.8);
+  });
 });
 
 describe('clampedLerp(t, a, b)', () => {
@@ -59,5 +63,9 @@ describe('clampedLerp(t, a, b)', () => {
 
   it('should not continue below 0', () => {
     expect(clampedLerp(-1, 0, 1)).toBe(0);
+  });
+
+  it('should work inversely', () => {
+    expect(clampedLerp(1.2, 1, 0)).toBe(0);
   });
 });

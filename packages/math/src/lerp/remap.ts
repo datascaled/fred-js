@@ -19,7 +19,11 @@ export function remap(
   destA: number,
   destB: number,
 ): number {
-  return lerp(invLerp(value, srcA, srcB), destA, destB);
+  return lerp(
+    invLerp(value, srcA, srcB),
+    destA,
+    destB,
+  );
 }
 
 /**
@@ -40,5 +44,9 @@ export function clampedRemap(
   destA: number,
   destB: number,
 ): number {
-  return lerp(clampedInvLerp(value, srcA, srcB), destA, destB);
+  return lerp(
+    clampedInvLerp(value, srcA, srcB),
+    destA,
+    destB,
+  );
 }

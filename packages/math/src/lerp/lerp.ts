@@ -10,9 +10,7 @@ import { clamp01 } from '@fred/math';
  * @returns The interpolated value.
  */
 export function lerp(t: number, a: number, b: number): number {
-  const aa = a * (1 - t); // When t = 0, this term is a.
-  const bb = b * t; // When t = 1, this term is b.
-  return a + aa + bb;
+  return t * (b - a) + a;
 }
 
 /**
